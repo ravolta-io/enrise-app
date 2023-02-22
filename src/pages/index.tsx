@@ -1,7 +1,7 @@
+import { APIService, Quote } from "@/api/APIService";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { useMemo, useState } from "react";
 
-import { APIService } from "@/api/APIService";
 import { APP_CONFIG } from "@/constants/app-config.constants";
 import { BlockQuote } from "@/components/typography/texts";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -12,7 +12,7 @@ import RotatingImage from "@/components/images/RotatingImage";
 
 interface PageProps {
   pageData: {
-    quote: string;
+    quote: Quote;
   };
   error: string | false;
 }
