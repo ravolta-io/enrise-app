@@ -14,6 +14,8 @@ The app is a simple NextJS app that fetches and displays random Kanye West quote
 
 This app is deployed via Netlify.
 
+URL: https://enrise-kanye-quotes.netlify.app/
+
 ## Installation
 
 The install instructions follow the basics for NextJS, or any other React type project.
