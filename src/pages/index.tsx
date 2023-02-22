@@ -94,6 +94,7 @@ const Home: React.FC<PageProps> = ({ pageData }) => {
           <section className="flex flex-col items-center justify-center gap-8 h-full p-4">
             <RotatingImage src={currentImage} alt="Kanye West" />
             <BlockQuote
+              wrapperClass="max-w-2xl"
               quoteClass="text-white font-bold"
               quotationClass="text-white/50"
               citeClass="text-white text-2xl font-bold"
