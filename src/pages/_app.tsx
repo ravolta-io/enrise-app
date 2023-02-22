@@ -10,7 +10,12 @@ const montserrat = Montserrat({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={montserrat.className}>
+    <main
+      className={`${montserrat.className} bg-background h-full bg-cover bg-center `}
+      style={{
+        backgroundImage: `url("/assets/img/curtain.jpg")`,
+      }}
+    >
       <Component {...pageProps} />
     </main>
   );

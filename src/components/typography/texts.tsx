@@ -12,6 +12,7 @@ interface BlockQuoteProps {
   author: string;
   wrapperClass?: string;
   quoteClass?: string;
+  quotationClass?: string;
   footerClass?: string;
   citeClass?: string;
 }
@@ -29,19 +30,24 @@ const ParagraphLarge: React.FC<TextLargeProps> = ({ children, className }) => {
 };
 
 const BlockQuote: React.FC<BlockQuoteProps> = ({
-  wrapperClass,
-  quoteClass,
-  footerClass,
-  citeClass,
+  wrapperClass = "",
+  quoteClass = "",
+  quotationClass = "",
+  footerClass = "",
+  citeClass = "",
   quote,
   author,
 }) => {
   return (
     <blockquote className={`relative ${wrapperClass}`}>
-      <span className="text-8xl absolute top-1 -left-16">&quot;</span>
-      <span className={quoteClass}>{quote}</span>
-      <span className="text-8xl absolute top-1 -right-16">&quot;</span>
-      <footer className={footerClass}>
+      <span className={`text-8xl absolute -top-2 -left-12 ${quotationClass}`}>
+        &quot;
+      </span>
+      <span className={`text-4xl ${quoteClass}`}>{quote}</span>
+      <span className={`text-8xl absolute -top-2 -right-12 ${quotationClass}`}>
+        &quot;
+      </span>
+      <footer className={`mt-8 text-center ${footerClass}`}>
         <cite className={citeClass}>{author}</cite>
       </footer>
     </blockquote>
